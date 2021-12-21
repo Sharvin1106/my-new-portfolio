@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: "#0F1624";
+}
+
+@layer utilities {
+  .grid-header-logo {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .grid-header-logo-sm {
+    grid-row: 1 / 1 / 2 / 3;
+  }
+  .layout-background {
+    background-color: "#0F1624";
+  }
+}
