@@ -1,13 +1,11 @@
 import React from "react";
-import Header from "../Header/Header";
+import Header from "../Header/Navbar";
 
 const Layout = ({ children }) => {
   return (
     <div
-      style={{ backgroundColor: "#0F1624" }}
-      class="max-w-screen-xl w-full m-auto layout-background"
+      className="max-w-screen-xl w-full m-auto"
     >
-      <Header />
       <main>{children}</main>
     </div>
   );

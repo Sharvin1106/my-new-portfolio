@@ -11,6 +11,9 @@ module.exports = {
         hero: "1fr",
         "hero-sm": "repeat(2, 60px)",
       },
+      fontFamily: {
+        sans: ["SF UI Display", "sans-serif"],
+      },
     },
   },
   plugins: [],

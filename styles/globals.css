@@ -1,14 +1,12 @@
+@import url("/fonts/style.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
 body {
-  background-color: "#0F1624";
+  background: #000000;
+  color: #ffffff;
+  /* font-family: "SF UI Display Semibold"; */
 }
 
 @layer utilities {
@@ -18,7 +16,39 @@ body {
   .grid-header-logo-sm {
     grid-row: 1 / 1 / 2 / 3;
   }
-  .layout-background {
-    background-color: "#0F1624";
+  .font-logo {
+    font-family: "SF UI Display Bold";
+  }
+  .font-link {
+    font-family: "SF UI Display Medium";
+  }
+  .gradient-header-logo {
+    color: #2fdd92;
+  }
+  .hero-word {
+    background: #2fdd92;
+    background: -webkit-radial-gradient(
+      circle farthest-side at center center,
+      #2fdd92 0%,
+      #00c89d 100%
+    );
+    background: -moz-radial-gradient(
+      circle farthest-side at center center,
+      #2fdd92 0%,
+      #00c89d 100%
+    );
+    background: radial-gradient(
+      circle farthest-side at center center,
+      #2fdd92 0%,
+      #00c89d 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "SF UI Display Semibold";
+    font-size: 54px;
+  }
+  .hero-font{
+      font-family:'SF UI Display Semibold';
+      font-size: 54px;
   }
 }
