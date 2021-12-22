@@ -26,7 +26,6 @@ body {
     color: #2fdd92;
   }
   .hero-word {
-    background: #2fdd92;
     background: -webkit-radial-gradient(
       circle farthest-side at center center,
       #2fdd92 0%,
@@ -47,8 +46,85 @@ body {
     font-family: "SF UI Display Semibold";
     font-size: 54px;
   }
-  .hero-font{
-      font-family:'SF UI Display Semibold';
-      font-size: 54px;
+  .hero-name-grad {
+    background: -webkit-radial-gradient(
+      circle farthest-side at center center,
+      #2fdd92 0%,
+      #00c89d 100%
+    );
+    background: -moz-radial-gradient(
+      circle farthest-side at center center,
+      #2fdd92 0%,
+      #00c89d 100%
+    );
+    background: radial-gradient(
+      circle farthest-side at center center,
+      #2fdd92 0%,
+      #00c89d 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-font {
+    font-family: "SF UI Display Semibold";
+    font-size: 54px;
+  }
+  .hero-name {
+    font-family: "SF UI Display Medium";
+    font-size: 28px;
+  }
+  .tech-section-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tech-section-grid-vw {
+    width: calc(100vw - 32px);
+  }
+  .section-title {
+    font-family: "SF UI Display Bold";
+    font-weight: 800;
+    font-size: 65px;
+    line-height: 72px;
+    background: linear-gradient(
+      121.57deg,
+      #ffffff 18.77%,
+      rgba(255, 255, 255, 0.66) 60.15%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .section-title-md {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  .section-title-sm {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .tech-ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tech-li-md {
+    max-width: 203px;
+  }
+  .tech-li-sm {
+    max-width: 320px;
+  }
+  .tech-li-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  .tech-li-title-md {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .tech-li-title-sm {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
   }
 }
