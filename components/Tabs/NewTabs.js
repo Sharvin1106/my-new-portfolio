@@ -13,7 +13,7 @@ const NewTabs = () => {
       <h2 className="section-title w-max max-w-full mb-16px pt-58px px-0 pb-16px md:mb-12px md:pt-40px md:px-0 md:pb-12px sm:mb-8px sm:pt-16px sm:px-0 sm:pb-8px sm:max-w-full">
         Technologies
       </h2>
-      <div className="flex flex-col items-start my-10">
+      <div className="container mx-auto px-0 md:px-4 py-4">
         <TabGroup numTabs={5} direction={TabGroup.direction.HORIZONTAL}>
           <TabGroup.TabList>
             <TabGroup.Tab
@@ -63,7 +63,7 @@ const NewTabs = () => {
             activeClassName="opacity-100 duration-500 translate-x-0"
             inactiveClassName="absolute opacity-0 -translate-x-2"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4 mb-20">
+            <div className="flex flex-col md:flex-row sm:flex-col overflow-scroll">
               {Languages.map((language) => {
                 return <TechCard key={language.id} {...language} />;
               })}
@@ -75,7 +75,7 @@ const NewTabs = () => {
             activeClassName="opacity-100 duration-500 translate-x-0"
             inactiveClassName="absolute opacity-0 -translate-x-2"
           >
-            <div className="flex md:flex-row sm:flex-col">
+            <div className="flex md:flex-row sm:flex-col overflow-scroll">
               {Webs.map((web) => {
                 return <TechCard key={web.id} {...web} />;
               })}
@@ -87,7 +87,7 @@ const NewTabs = () => {
             activeClassName="opacity-100 duration-500 translate-x-0"
             inactiveClassName="absolute opacity-0 -translate-x-2"
           >
-            <div className="flex md:flex-row sm:flex-col">
+            <div className="flex md:flex-row sm:flex-col overflow-scroll">
               {Mobiles.map((mobile) => {
                 return <TechCard key={mobile.id} {...mobile} />;
               })}
@@ -95,11 +95,11 @@ const NewTabs = () => {
           </TabGroup.TabPanel>
           <TabGroup.TabPanel
             index={3}
-            className="p-16 transition-all transform h-64"
+            className="p-16 transition-all transform h-64 overflow-scroll"
             activeClassName="opacity-100 duration-500 translate-x-0"
             inactiveClassName="absolute opacity-0 -translate-x-2"
           >
-            <div className="flex md:flex-row sm:flex-col">
+            <div className="flex md:flex-row sm:flex-col overflow-scroll">
               {Clouds.map((cloud) => {
                 return <TechCard key={cloud.id} {...cloud} />;
               })}
@@ -107,7 +107,7 @@ const NewTabs = () => {
           </TabGroup.TabPanel>
           <TabGroup.TabPanel
             index={4}
-            className="p-16 transition-all transform h-64"
+            className="p-16 transition-all transform h-64 overflow-scroll"
             activeClassName="opacity-100 duration-500 translate-x-0"
             inactiveClassName="absolute opacity-0 -translate-x-2"
           >

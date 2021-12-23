@@ -14,8 +14,8 @@ export default function Home() {
       <Layout>
         <Hero />
         {/* <Technologies /> */}
-        {/* <TabsRender /> */}
-        <NewTabs />
+        <TabsRender />
+        {/* <NewTabs /> */}
         <ProjectDeck />
       </Layout>
     </>
