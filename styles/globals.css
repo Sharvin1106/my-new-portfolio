@@ -100,31 +100,11 @@ body {
     font-size: 32px;
     line-height: 40px;
   }
-  .tech-ul {
-    grid-template-columns: repeat(3, 1fr);
+  .tech-title {
+    font-family: "SF UI Display Medium";
   }
-  .tech-li-md {
-    max-width: 203px;
-  }
-  .tech-li-sm {
-    max-width: 320px;
-  }
-  .tech-li-title {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 32px;
-    letter-spacing: 0.02em;
-    color: #ffffff;
-    margin-bottom: 8px;
-  }
-  .tech-li-title-md {
-    font-size: 24px;
-    line-height: 28px;
-  }
-  .tech-li-title-sm {
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 0.02em;
-    margin-bottom: 4px;
+  .tech-background-grad {
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
   }
 }

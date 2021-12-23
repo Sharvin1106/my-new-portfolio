@@ -1,4 +1,5 @@
 import React from "react";
+import TechCard from "../Technologies/TechCards";
 import Technologies from "../Technologies/Technologies";
 
 const Tabs = ({ color }) => {
@@ -8,9 +9,9 @@ const Tabs = ({ color }) => {
       className="flex flex-row p-0 my-20 mx-auto max-w-screen-lg box-content relative overflow-hidden tech-section-grid md:px-48px md:pt-24px md:pb-0 md:flex-col sm:p-0 sm:tech-section-grid-vw sm:flex-col"
       id="tech"
     >
-       <h2 className="section-title w-max max-w-full mb-16px pt-58px px-0 pb-16px md:mb-12px md:pt-40px md:px-0 md:pb-12px sm:mb-8px sm:pt-16px sm:px-0 sm:pb-8px sm:max-w-full">
+      <h2 className="section-title w-max max-w-full mb-16px pt-58px px-0 pb-16px md:mb-12px md:pt-40px md:px-0 md:pb-12px sm:mb-8px sm:pt-16px sm:px-0 sm:pb-8px sm:max-w-full">
         Technologies
-          </h2>
+      </h2>
       <div className="flex flex-wrap">
         <div className="w-auto">
           <ul
@@ -75,8 +76,9 @@ const Tabs = ({ color }) => {
           <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <Technologies />
+                <div className={(openTab === 1 ? "flex flex-row" : "hidden") + " gap-40px"} id="link1">
+                  <TechCard />
+                  <TechCard />
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <Technologies />
