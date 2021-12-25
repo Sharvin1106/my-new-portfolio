@@ -1,16 +1,12 @@
 import React from "react";
 import TechCard from "../Technologies/TechCards";
-import { Languages } from "../../dummyData/TechStack/Languages";
-import { Web as Webs } from "../../dummyData/TechStack/Web";
-import { Mobile as Mobiles } from "../../dummyData/TechStack/Mobile";
-import { Cloud as Clouds } from "../../dummyData/TechStack/Cloud";
-import { ML as MLS } from "../../dummyData/TechStack/ML";
 
-const Tabs = ({ color }) => {
+const Tabs = ({ Languages, Webs, Mobiles, Clouds, MLS }) => {
   const [openTab, setOpenTab] = React.useState(1);
+
   return (
     <section className="p-0 my-20 mx-auto max-w-screen-lg box-content">
-      <h2 className="section-title w-max max-w-full mb-16px pt-58px px-0 pb-16px md:mb-12px md:pt-40px md:px-0 md:pb-12px sm:mb-8px sm:pt-16px sm:px-0 sm:pb-8px sm:max-w-full">
+      <h2 className="section-title tech-section-title w-max max-w-full mb-16px pt-58px px-0 pb-16px md:mb-12px md:pt-40px md:px-0 md:pb-12px sm:mb-8px sm:pt-16px sm:px-0 sm:pb-8px sm:max-w-full">
         Technologies
       </h2>
       <div className="flex flex-wrap">
@@ -19,10 +15,17 @@ const Tabs = ({ color }) => {
             className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
             role="tablist"
           >
-            <li className="-mb-px mr-10px last:mr-0 flex-auto text-center">
+            <li
+              className={
+                openTab === 1
+                  ? "tech-section-title "
+                  : "text-white " +
+                    "-mb-px mr-10px last:mr-0 text-center rounded-full gradient-header-logo"
+              }
+            >
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white"
+                  "text-xs font-link px-5 py-3 shadow-lg block leading-normal text-white"
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -35,10 +38,17 @@ const Tabs = ({ color }) => {
                 Languages
               </a>
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li
+              className={
+                openTab === 2
+                  ? "tech-section-title "
+                  : "text-white " +
+                    "-mb-px mr-10px last:mr-0 text-center rounded-full gradient-header-logo"
+              }
+            >
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white"
+                  "text-xs font-link px-5 py-3 shadow-lg rounded block leading-normal text-white"
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -51,11 +61,17 @@ const Tabs = ({ color }) => {
                 Web Dev
               </a>
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li
+              className={
+                openTab === 3
+                  ? "tech-section-title "
+                  : "text-white " +
+                    "-mb-px mr-10px last:mr-0 text-center rounded-full gradient-header-logo"
+              }
+            >
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white"
-                  
+                  "text-xs font-link px-5 py-3 shadow-lg rounded block leading-normal text-white"
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -68,10 +84,17 @@ const Tabs = ({ color }) => {
                 Mobile Dev
               </a>
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li
+              className={
+                openTab === 4
+                  ? "tech-section-title "
+                  : "text-white " +
+                    "-mb-px mr-10px last:mr-0 text-center rounded-full gradient-header-logo"
+              }
+            >
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white"
+                  "text-xs font-link px-5 py-3 shadow-lg rounded block leading-normal text-white"
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -84,10 +107,17 @@ const Tabs = ({ color }) => {
                 Cloud
               </a>
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li
+              className={
+                openTab === 5
+                  ? "tech-section-title "
+                  : "text-white " +
+                    "-mb-px mr-10px last:mr-0 text-center rounded-full gradient-header-logo"
+              }
+            >
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white"
+                  "text-xs font-link px-5 py-3 shadow-lg rounded block leading-normal text-white"
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -105,35 +135,35 @@ const Tabs = ({ color }) => {
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <div className="flex flex-col md:flex-row sm:flex-col overflow-scroll">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-4">
                     {Languages.map((language) => {
                       return <TechCard key={language.id} {...language} />;
                     })}
                   </div>
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <div className="flex flex-col md:flex-row sm:flex-col overflow-scroll">
+                  <div className="flex flex-col md:flex-row sm:flex-col">
                     {Webs.map((web) => {
                       return <TechCard key={web.id} {...web} />;
                     })}
                   </div>
                 </div>
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                  <div className="flex flex-col md:flex-row sm:flex-col overflow-scroll">
+                  <div className="flex flex-col md:flex-row sm:flex-col">
                     {Mobiles.map((mobile) => {
                       return <TechCard key={mobile.id} {...mobile} />;
                     })}
                   </div>
                 </div>
                 <div className={openTab === 4 ? "block" : "hidden"} id="link3">
-                  <div className="flex flex-col md:flex-row sm:flex-col overflow-scroll">
+                  <div className="flex flex-col md:flex-row sm:flex-col">
                     {Clouds.map((cloud) => {
                       return <TechCard key={cloud.id} {...cloud} />;
                     })}
                   </div>
                 </div>
                 <div className={openTab === 5 ? "block" : "hidden"} id="link3">
-                  <div className="flex flex-col md:flex-row sm:flex-col overflow-scroll">
+                  <div className="flex flex-col md:flex-row sm:flex-col">
                     {MLS.map((ml) => {
                       return <TechCard key={ml.id} {...ml} />;
                     })}
@@ -148,10 +178,16 @@ const Tabs = ({ color }) => {
   );
 };
 
-export default function TabsRender() {
+export default function TabsRender({ Languages, Webs, Mobiles, Clouds, MLS }) {
   return (
     <>
-      <Tabs color="red" />
+      <Tabs
+        Languages={Languages}
+        Webs={Webs}
+        Mobiles={Mobiles}
+        Clouds={Clouds}
+        MLS={MLS}
+      />
     </>
   );
 }

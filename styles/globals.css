@@ -84,10 +84,45 @@ body {
     font-weight: 800;
     font-size: 65px;
     line-height: 72px;
-    background: linear-gradient(
-      121.57deg,
-      #ffffff 18.77%,
-      rgba(255, 255, 255, 0.66) 60.15%
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .tech-section-title {
+    background: #63ecf7;
+    background: -webkit-radial-gradient(
+      circle farthest-side at center center,
+      #63ecf7 0%,
+      #84dfff 100%
+    );
+    background: -moz-radial-gradient(
+      circle farthest-side at center center,
+      #63ecf7 0%,
+      #84dfff 100%
+    );
+    background: radial-gradient(
+      circle farthest-side at center center,
+      #63ecf7 0%,
+      #84dfff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .project-section-title {
+    background: #d47ae8;
+    background: -webkit-radial-gradient(
+      circle farthest-side at top right,
+      #d47ae8 0%,
+      #ff77c4 100%
+    );
+    background: -moz-radial-gradient(
+      circle farthest-side at top right,
+      #d47ae8 0%,
+      #ff77c4 100%
+    );
+    background: radial-gradient(
+      circle farthest-side at top right,
+      #d47ae8 0%,
+      #ff77c4 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -102,9 +137,24 @@ body {
   }
   .tech-title {
     font-family: "SF UI Display Medium";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
   }
   .tech-background-grad {
     background-color: #000000;
     background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  }
+  .scrollbar-disabled::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-disabled {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .tabs-background {
+    background-color: #ffffff;
   }
 }
