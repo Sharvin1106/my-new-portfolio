@@ -3,7 +3,7 @@ import React from "react";
 
 const TechCard = ({ attributes }) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mb-6">
       <div
         style={{
           boxShadow: attributes.BoxShadow

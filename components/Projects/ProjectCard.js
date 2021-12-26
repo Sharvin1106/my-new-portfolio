@@ -7,7 +7,7 @@ import ProjectPills from "./ProjectPill";
 const ProjectCard = ({ attributes }) => {
   const tags = JSON.parse(attributes.stack);
   return (
-    <div className="bg-white hover:tech-background-grad shadow-xl hover:shadow-none cursor-pointer w-80 rounded-3xl flex flex-col items-center justify-center transition-all duration-500 ease-in-out">
+    <div className="bg-white hover:tech-background-grad shadow-xl hover:shadow-none cursor-pointer w-80 rounded-3xl flex flex-col items-center justify-center transition-all duration-500 ease-in-out mb-4">
       <div className="relative mt-2 mx-2">
         <div className="h-56 rounded-2xl overflow-hidden">
           <img
@@ -39,7 +39,7 @@ const ProjectCard = ({ attributes }) => {
         })}
       </div>
       <div className="pt-6 pb-6 w-full px-4">
-        <h1 className="font-medium leading-none text-base tracking-wider text-gray-400">
+        <h1 className="project-card-title leading-none text-base tracking-wider text-gray-400">
           {attributes.title}
         </h1>
       </div>

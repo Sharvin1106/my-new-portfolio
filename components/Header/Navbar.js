@@ -17,6 +17,7 @@ function Navbar() {
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link
+                    href="about"
                     activeClass="Home"
                     to="about"
                     smooth={true}
@@ -38,7 +39,8 @@ function Navbar() {
                   </Link>
                   <Link
                     activeClass="work"
-                    to="work"
+                    href="project"
+                    to="project"
                     smooth={true}
                     offset={50}
                     duration={500}
@@ -49,7 +51,8 @@ function Navbar() {
 
                   <Link
                     activeClass="Services"
-                    to="work"
+                    to="tech"
+                    href="tech"
                     smooth={true}
                     offset={50}
                     duration={500}
@@ -64,7 +67,7 @@ function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-blue-600 inline-flex items-center justify-center p-2 rounded-md text-white  hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
+                className="navbar-btn-grad inline-flex items-center justify-center p-2 rounded-md text-white  hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >

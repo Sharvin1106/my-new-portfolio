@@ -13,13 +13,16 @@ export default function Home({
   Clouds,
   MLS,
   Projects,
+  Biodata,
 }) {
+  const { introduction, github, profilePic, linkedin, facebook, instagram } =
+    Biodata[0].attributes;
   return (
     <>
       <Navbar />
       <Layout>
         <Hero />
-        <About />
+        <About introduction={introduction} profilePic={profilePic} />
         <TabsRender
           Languages={Languages}
           Webs={Webs}
@@ -27,8 +30,13 @@ export default function Home({
           Clouds={Clouds}
           MLS={MLS}
         />
-        <ProjectDeck Projects={Projects} />
-        <Footer />
+        <ProjectDeck Projects={Projects} github={github} />
+        <Footer
+          instagram={instagram}
+          facebook={facebook}
+          linkedin={linkedin}
+          github={github}
+        />
       </Layout>
     </>
   );
@@ -47,7 +55,9 @@ export async function getStaticProps() {
   const { data: MLS } = await mlRes.json();
   const projectRes = await fetch(process.env.API_URL + "/projects");
   const { data: Projects } = await projectRes.json();
+  const biodataRes = await fetch(process.env.API_URL + "/biodatas");
+  const { data: Biodata } = await biodataRes.json();
   return {
-    props: { Languages, Webs, Mobiles, Clouds, MLS, Projects },
+    props: { Languages, Webs, Mobiles, Clouds, MLS, Projects, Biodata },
   };
 }

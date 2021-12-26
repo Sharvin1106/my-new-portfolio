@@ -25,6 +25,15 @@ body {
   .gradient-header-logo {
     color: #2fdd92;
   }
+  .navbar-btn-grad {
+    background: rgb(47, 221, 146);
+    background: linear-gradient(
+      90deg,
+      rgba(47, 221, 146, 1) 0%,
+      rgba(0, 200, 157, 1) 36%,
+      rgba(0, 178, 165, 1) 100%
+    );
+  }
   .hero-word {
     background: -webkit-radial-gradient(
       circle farthest-side at center center,
@@ -73,6 +82,10 @@ body {
     font-family: "SF UI Display Medium";
     font-size: 28px;
   }
+  .about-para {
+    font-family: "SF UI Display Semibold";
+    font-size: 24px;
+  }
   .tech-section-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -82,50 +95,63 @@ body {
   .section-title {
     font-family: "SF UI Display Bold";
     font-weight: 800;
-    font-size: 65px;
+    font-size: 55px;
     line-height: 72px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .tech-section-title {
     background: #63ecf7;
-    background: -webkit-radial-gradient(
-      circle farthest-side at center center,
+    background: -webkit-linear-gradient(
+      to right,
       #63ecf7 0%,
-      #84dfff 100%
+      #77faca 50%,
+      #5ff4e5 100%
     );
-    background: -moz-radial-gradient(
-      circle farthest-side at center center,
+    background: -moz-linear-gradient(
+      to right,
       #63ecf7 0%,
-      #84dfff 100%
+      #77faca 50%,
+      #5ff4e5 100%
     );
-    background: radial-gradient(
-      circle farthest-side at center center,
+    background: linear-gradient(
+      to right,
       #63ecf7 0%,
-      #84dfff 100%
+      #77faca 50%,
+      #5ff4e5 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .project-section-title {
-    background: #d47ae8;
-    background: -webkit-radial-gradient(
-      circle farthest-side at top right,
-      #d47ae8 0%,
-      #ff77c4 100%
+    background: #c1b9ff;
+    background: -webkit-linear-gradient(
+      to right,
+      #c1b9ff 0%,
+      #ffafcf 50%,
+      #ffb2f3 100%
     );
-    background: -moz-radial-gradient(
-      circle farthest-side at top right,
-      #d47ae8 0%,
-      #ff77c4 100%
+    background: -moz-linear-gradient(
+      to right,
+      #c1b9ff 0%,
+      #ffafcf 50%,
+      #ffb2f3 100%
     );
-    background: radial-gradient(
-      circle farthest-side at top right,
-      #d47ae8 0%,
-      #ff77c4 100%
+    background: linear-gradient(
+      to right,
+      #c1b9ff 0%,
+      #ffafcf 50%,
+      #ffb2f3 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .pills-font {
+    font-family: "SF UI Display Medium";
+  }
+  .project-card-title {
+    font-family: "SF UI Display Semibold";
+    font-size: 24px;
   }
   .section-title-md {
     font-size: 56px;
@@ -156,5 +182,11 @@ body {
   }
   .tabs-background {
     background-color: #ffffff;
+  }
+  .footer-title {
+    font-family: "SF UI Display Medium";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
   }
 }

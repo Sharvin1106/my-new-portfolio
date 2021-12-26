@@ -10,6 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>Sharvin</title>
           {/* <link href="../public/fonts/style.css" rel="stylesheet" /> */}
         </Head>
         <body>
