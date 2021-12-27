@@ -126,17 +126,6 @@ function Navbar() {
                 className="bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3"
               >
                 <Link
-                  href="/home"
-                  activeClass="home"
-                  to="home"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Home
-                </Link>
-                <Link
                   href="/about"
                   activeClass="about"
                   to="about"
@@ -151,7 +140,7 @@ function Navbar() {
                 <Link
                   href="/work"
                   activeClass="work"
-                  to="work"
+                  to="project"
                   smooth={true}
                   offset={50}
                   duration={500}
@@ -162,19 +151,19 @@ function Navbar() {
                 <Link
                   href="/services"
                   activeClass="services"
-                  to="services"
+                  to="tech"
                   smooth={true}
                   offset={50}
                   duration={500}
                   className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Services
+                  Technologies
                 </Link>
 
                 <Link
                   href="/contact"
                   activeClass="work"
-                  to="work"
+                  to="contact"
                   smooth={true}
                   offset={50}
                   duration={500}

@@ -11,7 +11,7 @@ import {
 import { MdEmail } from "react-icons/md";
 const Footer = ({ github, linkedin, instagram, facebook }) => {
   return (
-    <footer class="border-t border-gray-200">
+    <footer id="contact" class="border-t border-gray-200">
       <div
         class="
           container
@@ -65,7 +65,9 @@ const Footer = ({ github, linkedin, instagram, facebook }) => {
         </div>
         <div class="justify-between w-full text-center lg:flex">
           <div class="w-full px-4 lg:w-1/3 md:w-1/2">
-            <h2 class="mb-2 tracking-widest text-white footer-title">Contact</h2>
+            <h2 class="mb-2 tracking-widest text-white footer-title">
+              Contact
+            </h2>
             <ul class="mb-8 space-y-2 text-sm list-none">
               <li>
                 <a class="px-4 py-2 text-white inline-flex items-center space-x-2">
